@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjs6kgujf45tc"
+path="res://.godot/imported/ilex-paraguariensis_button.mp3-57b28e1a3d7e6534ce1ebd6793f7b482.mp3str"
+
+[deps]
+
+source_file="res://Menus/Main menu/Assets/ilex-paraguariensis_button.mp3"
+dest_files=["res://.godot/imported/ilex-paraguariensis_button.mp3-57b28e1a3d7e6534ce1ebd6793f7b482.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
