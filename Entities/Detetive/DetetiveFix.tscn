@@ -32,10 +32,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DetetiveFix" type="Area2D" unique_id=690885281]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_plcw0"]
+height = 30.4
+
+[node name="DetetiveFix" type="CharacterBody2D" unique_id=2022686740]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_jbn5e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884000968]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_jbftl")
 animation = &"walk_up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042648119]
+position = Vector2(0, 8.799999)
+shape = SubResource("CapsuleShape2D_plcw0")
