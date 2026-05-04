@@ -19,30 +19,45 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_wmi17")
 
-[node name="Panel" type="Panel" parent="." unique_id=364550851]
-use_parent_material = true
+[node name="ColorRect" type="ColorRect" parent="." unique_id=123959267]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.28)
+color = Color(0, 0, 0, 1)
+
+[node name="CanoirPanel" type="Panel" parent="." unique_id=364550851]
+texture_filter = 1
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.0
+offset_right = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9018859, 0.995919)
 theme_override_styles/panel = SubResource("StyleBoxTexture_wmi17")
-metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1512402887]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -348.0
-offset_top = 310.0
-offset_right = -275.0
-offset_bottom = 408.0
+offset_left = -740.0
+offset_top = 482.0
+offset_right = -667.0
+offset_bottom = 580.0
 grow_horizontal = 2
-scale = Vector2(1.5, 1.5)
+scale = Vector2(3, 3)
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=361126236]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
@@ -50,6 +65,7 @@ theme_override_fonts/font = ExtResource("1_p2yhr")
 text = "Iniciar"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=653450718]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
@@ -57,6 +73,7 @@ theme_override_fonts/font = ExtResource("1_p2yhr")
 text = "Opções"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1499817407]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
@@ -67,10 +84,10 @@ text = "Sair"
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 252.0
-offset_top = 251.0
-offset_right = 285.0
-offset_bottom = 276.0
+offset_left = 651.0
+offset_top = 457.0
+offset_right = 684.0
+offset_bottom = 482.0
 focus_mode = 1
 
 [node name="HiddenButtonAudio" type="AudioStreamPlayer2D" parent="HiddenButton" unique_id=1988847689]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://m8j57c0r0hr4"]
+
+[ext_resource type="Script" uid="uid://b6kkadhfw1ybq" path="res://MainScene.gd" id="1_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://b2q5l3cefim58" path="res://Stages/Office/Office.tscn" id="2_uxrcv"]
+[ext_resource type="PackedScene" uid="uid://cp7qlisheh4hq" path="res://Entities/Detetive/DetetiveFix.tscn" id="3_rf2cd"]
+
+[node name="MainScene" type="Node" unique_id=1410771261]
+script = ExtResource("1_rpqi1")
+
+[node name="SpanwPoint" type="Marker2D" parent="." unique_id=32095228]
+position = Vector2(1033, 984)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Office" parent="." unique_id=1372138319 instance=ExtResource("2_uxrcv")]
+
+[node name="DetetiveFix" parent="." unique_id=2022686740 instance=ExtResource("3_rf2cd")]
