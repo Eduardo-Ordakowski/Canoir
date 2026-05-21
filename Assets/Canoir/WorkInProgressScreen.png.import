@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj8buw2b1porb"
-path="res://.godot/imported/MENU MAIOR.png-1b2cd15775087c2fbea57a0d612e015c.ctex"
+uid="uid://bm0t8orj5rxso"
+path="res://.godot/imported/WorkInProgressScreen.png-dbb0e9f7a3e8b514f6f2c8d5d02a5b10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menus/Main menu/Assets/MENU MAIOR.png"
-dest_files=["res://.godot/imported/MENU MAIOR.png-1b2cd15775087c2fbea57a0d612e015c.ctex"]
+source_file="res://Assets/Canoir/WorkInProgressScreen.png"
+dest_files=["res://.godot/imported/WorkInProgressScreen.png-dbb0e9f7a3e8b514f6f2c8d5d02a5b10.ctex"]
 
 [params]
 

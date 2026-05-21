@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://beo3cqev15ngh"]
+
+[ext_resource type="Texture2D" uid="uid://hsqg2ju3p5sm" path="res://Assets/Outro/WorkInProgressScreen.png" id="1_4041x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0ki8"]
+texture = ExtResource("1_4041x")
+
+[node name="Node2D" type="Control" unique_id=30866102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=347746798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WorkInProgress" type="Panel" parent="." unique_id=1028374794]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -759.0
+offset_top = -515.5
+offset_right = 759.0
+offset_bottom = 515.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g0ki8")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3bvsedqvacbu"
-path="res://.godot/imported/MainMenu.png-980d35070a907a8a1472c81113ce85a0.ctex"
+uid="uid://dh13g08roiklf"
+path="res://.godot/imported/GlitchDoorAsset.png-ed9b2dae783a0bdbe9b0059bd7fd02c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menus/Main menu/Assets/MainMenu.png"
-dest_files=["res://.godot/imported/MainMenu.png-980d35070a907a8a1472c81113ce85a0.ctex"]
+source_file="res://Mechanics/GlitchPuzzles/Interactables/GlitchDoor/Assets/GlitchDoorAsset.png"
+dest_files=["res://.godot/imported/GlitchDoorAsset.png-ed9b2dae783a0bdbe9b0059bd7fd02c9.ctex"]
 
 [params]
 
