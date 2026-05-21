@@ -3,14 +3,22 @@
 [ext_resource type="Script" uid="uid://b6kkadhfw1ybq" path="res://MainScene.gd" id="1_rpqi1"]
 [ext_resource type="PackedScene" uid="uid://b2q5l3cefim58" path="res://Stages/Office/Office.tscn" id="2_uxrcv"]
 [ext_resource type="PackedScene" uid="uid://cp7qlisheh4hq" path="res://Entities/Detetive/DetetiveFix.tscn" id="3_rf2cd"]
+[ext_resource type="PackedScene" uid="uid://dhc0rr5ado6a3" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchDoor/GlitchedDoor.tscn" id="5_rf2cd"]
+[ext_resource type="PackedScene" uid="uid://bcxqadpnu8wj5" path="res://Mechanics/GlitchPuzzles/UI/GapPuzzleUi.tscn" id="6_a814b"]
 
 [node name="MainScene" type="Node" unique_id=1410771261]
 script = ExtResource("1_rpqi1")
 
 [node name="SpanwPoint" type="Marker2D" parent="." unique_id=32095228]
-position = Vector2(1033, 984)
+position = Vector2(932, 908)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Office" parent="." unique_id=1372138319 instance=ExtResource("2_uxrcv")]
+scale = Vector2(3.8, 3.8)
+
+[node name="GlitchedDoor" parent="." unique_id=781067837 instance=ExtResource("5_rf2cd")]
+position = Vector2(716, 108)
+scale = Vector2(4, 4)
+puzzle_scene = ExtResource("6_a814b")
 
 [node name="DetetiveFix" parent="." unique_id=2022686740 instance=ExtResource("3_rf2cd")]

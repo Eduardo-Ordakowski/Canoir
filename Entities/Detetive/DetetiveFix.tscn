@@ -33,7 +33,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_plcw0"]
-height = 30.4
+radius = 11.599999
+height = 28.8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_plcw0"]
+radius = 39.199997
 
 [node name="DetetiveFix" type="CharacterBody2D" unique_id=2022686740]
 texture_filter = 1
@@ -46,5 +50,14 @@ sprite_frames = SubResource("SpriteFrames_jbftl")
 animation = &"walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042648119]
-position = Vector2(0, 8.799999)
+position = Vector2(0, 15.2)
 shape = SubResource("CapsuleShape2D_plcw0")
+
+[node name="InteractiveArea" type="Area2D" parent="." unique_id=1499042256]
+
+[node name="InteractiveCollision" type="CollisionShape2D" parent="InteractiveArea" unique_id=565212408]
+visible = false
+shape = SubResource("CircleShape2D_plcw0")
+
+[connection signal="area_entered" from="InteractiveArea" to="." method="_on_interactive_area_area_entered"]
+[connection signal="area_exited" from="InteractiveArea" to="." method="_on_interactive_area_area_exited"]

@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://bcxqadpnu8wj5"]
+
+[ext_resource type="Script" uid="uid://co7vjn0yklh3h" path="res://Mechanics/GlitchPuzzles/UI/gap_puzzle_ui.gd" id="1_7eeqs"]
+[ext_resource type="Texture2D" uid="uid://klnd5methg3k" path="res://Assets/Glitch/PuzzleBackground.png" id="2_54a7p"]
+[ext_resource type="PackedScene" uid="uid://cn7lklcnjdm1y" path="res://Utilities/ResolveGlitchButton.tscn" id="2_clmto"]
+[ext_resource type="PackedScene" uid="uid://dq0oslur351sf" path="res://Mechanics/GlitchPuzzles/Types/DragDropPuzzle/DropSlot.tscn" id="2_fa557"]
+[ext_resource type="PackedScene" uid="uid://bil7tuc4duwow" path="res://Mechanics/GlitchPuzzles/Types/DragDropPuzzle/DraggableSyntax.tscn" id="3_ein2q"]
+[ext_resource type="FontFile" uid="uid://yk0qeiwnmcy8" path="res://Assets/Fonts/pixel_noir/Pixel-Noir Skinny.ttf" id="4_fa557"]
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="7_54a7p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8u5a"]
+texture = ExtResource("2_54a7p")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clmto"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.41568628, 0.06666667, 0.06666667, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 1
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[node name="GapPuzzleUi" type="CanvasLayer" unique_id=1739924048]
+scale = Vector2(0.8, 0.8)
+transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)
+script = ExtResource("1_7eeqs")
+
+[node name="Background" type="Panel" parent="." unique_id=523323959]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 387.5
+offset_top = 201.25
+offset_right = 118.5
+offset_bottom = 83.25
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_p8u5a")
+
+[node name="MainContainer" type="VBoxContainer" parent="." unique_id=826160643]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -254.74997
+offset_right = 152.83325
+offset_bottom = -54.74997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="PuzzleArea" type="HBoxContainer" parent="MainContainer" unique_id=1212299748]
+layout_mode = 2
+alignment = 1
+
+[node name="SlotOperator" parent="MainContainer/PuzzleArea" unique_id=815596049 instance=ExtResource("2_fa557")]
+layout_mode = 2
+
+[node name="SlotValue" parent="MainContainer/PuzzleArea" unique_id=1577057339 instance=ExtResource("2_fa557")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="InventoryArea" type="FlowContainer" parent="MainContainer" unique_id=251536495]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 20
+alignment = 1
+
+[node name="DraggableSyntax4" parent="MainContainer/InventoryArea" unique_id=1850827130 instance=ExtResource("3_ein2q")]
+layout_mode = 2
+syntax_value = "open"
+
+[node name="DraggableSyntax" parent="MainContainer/InventoryArea" unique_id=551215792 instance=ExtResource("3_ein2q")]
+layout_mode = 2
+syntax_value = "="
+
+[node name="DraggableSyntax2" parent="MainContainer/InventoryArea" unique_id=1486731112 instance=ExtResource("3_ein2q")]
+layout_mode = 2
+
+[node name="DraggableSyntax3" parent="MainContainer/InventoryArea" unique_id=1089302094 instance=ExtResource("3_ein2q")]
+layout_mode = 2
+syntax_value = "true"
+
+[node name="ResolveGlitchButton" parent="." unique_id=1617109843 instance=ExtResource("2_clmto")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = 311.0
+offset_right = 331.0
+offset_bottom = 349.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CloseButton" type="Button" parent="." unique_id=1993782854]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.966
+anchor_top = 0.040000003
+anchor_right = 0.966
+anchor_bottom = 0.040000003
+offset_left = 44.779907
+offset_top = 241.05002
+offset_right = 85.77991
+offset_bottom = 282.05002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_fa557")
+theme_override_styles/normal = SubResource("StyleBoxFlat_clmto")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="CloseButton" unique_id=1155122500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.5
+offset_top = -19.5
+offset_right = 18.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_54a7p")
+theme_override_font_sizes/font_size = 25
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ResolveGlitchButton" to="." method="_on_resolve_glitch_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

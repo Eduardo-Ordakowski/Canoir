@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c4qfbp4it2ee3"]
+
+[ext_resource type="PackedScene" uid="uid://bl2q5xmddoddc" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/BaseNode.tscn" id="1_5tpc3"]
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="2_muqx0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tpc3"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7019608, 0.85882354, 0.654902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[node name="AndGate" unique_id=1061215444 instance=ExtResource("1_5tpc3")]
+theme_override_styles/titlebar = SubResource("StyleBoxFlat_5tpc3")
+title = "And"
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+
+[node name="Label" parent="." index="1" unique_id=1776175555]
+text = ""
+
+[node name="Label2" type="Label" parent="." index="2" unique_id=1378154976]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_muqx0")
