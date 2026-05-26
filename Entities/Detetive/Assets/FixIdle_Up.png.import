@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs4d6h57ey1ji"
-path="res://.godot/imported/fix_lado.png-fe853510a9f1d4d751ea864c8786407a.ctex"
+uid="uid://bcbgn08tc50xw"
+path="res://.godot/imported/FixIdle_Up.png-a29a3431bbc13b4912995507d941d160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Detetive/Assets/fix_lado.png"
-dest_files=["res://.godot/imported/fix_lado.png-fe853510a9f1d4d751ea864c8786407a.ctex"]
+source_file="res://Entities/Detetive/Assets/FixIdle_Up.png"
+dest_files=["res://.godot/imported/FixIdle_Up.png-a29a3431bbc13b4912995507d941d160.ctex"]
 
 [params]
 

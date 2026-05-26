@@ -31,18 +31,17 @@ anti_aliasing = false
 anti_aliasing_size = 0.01
 
 [node name="GapPuzzleUi" type="CanvasLayer" unique_id=1739924048]
-scale = Vector2(0.8, 0.8)
-transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)
 script = ExtResource("1_7eeqs")
 
 [node name="Background" type="Panel" parent="." unique_id=523323959]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 387.5
-offset_top = 201.25
-offset_right = 118.5
-offset_bottom = 83.25
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -56,19 +55,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.5
-offset_top = -254.74997
-offset_right = 152.83325
-offset_bottom = -54.74997
+offset_left = -122.166626
+offset_top = -115.0
+offset_right = 122.166626
+offset_bottom = 85.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3, 3)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 35
 alignment = 1
 
 [node name="PuzzleArea" type="HBoxContainer" parent="MainContainer" unique_id=1212299748]
+texture_filter = 1
 layout_mode = 2
 alignment = 1
 
@@ -81,6 +80,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 
 [node name="InventoryArea" type="FlowContainer" parent="MainContainer" unique_id=251536495]
+texture_filter = 1
 layout_mode = 2
 theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 20
@@ -102,34 +102,30 @@ layout_mode = 2
 syntax_value = "true"
 
 [node name="ResolveGlitchButton" parent="." unique_id=1617109843 instance=ExtResource("2_clmto")]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 110.0
-offset_top = 311.0
-offset_right = 331.0
-offset_bottom = 349.5
+anchor_bottom = 1.0
+offset_left = -110.5
+offset_top = -88.5
+offset_right = 110.5
+offset_bottom = -50.0
 grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.5, 1.5)
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="CloseButton" type="Button" parent="." unique_id=1993782854]
 texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.966
-anchor_top = 0.040000003
-anchor_right = 0.966
-anchor_bottom = 0.040000003
-offset_left = 44.779907
-offset_top = 241.05002
-offset_right = 85.77991
-offset_bottom = 282.05002
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 48.0
+offset_right = -53.0
+offset_bottom = 78.0
+grow_horizontal = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("4_fa557")
@@ -143,14 +139,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.5
-offset_top = -19.5
-offset_right = 18.5
-offset_bottom = 21.5
+offset_left = -17.499985
+offset_top = -15.000002
+offset_right = 17.500015
+offset_bottom = 14.999998
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_54a7p")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 16
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1

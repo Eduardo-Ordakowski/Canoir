@@ -25,6 +25,7 @@ anti_aliasing = false
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jp7ru"]
 
 [node name="DraggableSyntax" type="PanelContainer" unique_id=1850827130]
+texture_filter = 1
 offset_right = 51.0
 offset_bottom = 23.0
 mouse_default_cursor_shape = 2
