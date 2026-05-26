@@ -40,8 +40,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 189.0
-offset_right = -9.473022
+offset_left = 119.99999
+offset_top = 15.999999
+offset_right = -78.47302
+offset_bottom = 1.4096069
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9018859, 0.995919)
@@ -50,10 +52,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_wmi17")
 [node name="CanoirLogo" type="Panel" parent="." unique_id=1182726329]
 texture_filter = 1
 layout_mode = 0
-offset_left = 665.0
-offset_top = 53.0
-offset_right = 705.0
-offset_bottom = 93.0
+offset_left = 176.00002
+offset_top = 7.9999995
+offset_right = 195.75917
+offset_bottom = 25.714289
 scale = Vector2(14.626128, 4.4596763)
 theme_override_styles/panel = SubResource("StyleBoxTexture_eyequ")
 
@@ -63,12 +65,11 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -664.0
-offset_top = 482.0
-offset_right = -591.0
-offset_bottom = 580.0
+offset_left = -200.0
+offset_top = 160.0
+offset_right = -127.0
+offset_bottom = 258.0
 grow_horizontal = 2
-scale = Vector2(3, 3)
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=361126236]
 texture_filter = 1
@@ -98,10 +99,10 @@ text = "Sair"
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 680.0
-offset_top = 437.0
-offset_right = 741.0
-offset_bottom = 501.0
+offset_left = 245.0
+offset_top = 145.0
+offset_right = 262.0
+offset_bottom = 168.0
 focus_mode = 1
 
 [node name="HiddenButtonAudio" type="AudioStreamPlayer2D" parent="HiddenButton" unique_id=1988847689]

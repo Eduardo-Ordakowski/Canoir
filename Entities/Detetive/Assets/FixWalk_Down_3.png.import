@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgbupwmfwfbi1"
-path="res://.godot/imported/fix_atras.png-745e99eac4ff6741b390cc90af6b38de.ctex"
+uid="uid://c31ma7ufmugjt"
+path="res://.godot/imported/FixWalk_Down_3.png-8cbdb185e3165a1614a1ed92f50bb2d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Detetive/Assets/fix_atras.png"
-dest_files=["res://.godot/imported/fix_atras.png-745e99eac4ff6741b390cc90af6b38de.ctex"]
+source_file="res://Entities/Detetive/Assets/FixWalk_Down_3.png"
+dest_files=["res://.godot/imported/FixWalk_Down_3.png-8cbdb185e3165a1614a1ed92f50bb2d6.ctex"]
 
 [params]
 

@@ -10,15 +10,13 @@
 script = ExtResource("1_rpqi1")
 
 [node name="SpanwPoint" type="Marker2D" parent="." unique_id=32095228]
-position = Vector2(932, 908)
+position = Vector2(308, 276)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Office" parent="." unique_id=1372138319 instance=ExtResource("2_uxrcv")]
-scale = Vector2(3.8, 3.8)
 
 [node name="GlitchedDoor" parent="." unique_id=781067837 instance=ExtResource("5_rf2cd")]
-position = Vector2(716, 108)
-scale = Vector2(4, 4)
+position = Vector2(247, 59)
 puzzle_scene = ExtResource("6_a814b")
 
 [node name="DetetiveFix" parent="." unique_id=2022686740 instance=ExtResource("3_rf2cd")]

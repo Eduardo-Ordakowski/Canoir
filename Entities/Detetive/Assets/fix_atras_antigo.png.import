@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu7ay5fehaanc"
-path="res://.godot/imported/fix_frente.png-8bddccd40d17b09b7a7143a836aa4013.ctex"
+uid="uid://7h8yfhgdgsul"
+path="res://.godot/imported/fix_atras_antigo.png-c2be2bb54f7c70816a32c130f6d07a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Detetive/Assets/fix_frente.png"
-dest_files=["res://.godot/imported/fix_frente.png-8bddccd40d17b09b7a7143a836aa4013.ctex"]
+source_file="res://Entities/Detetive/Assets/fix_atras_antigo.png"
+dest_files=["res://.godot/imported/fix_atras_antigo.png-c2be2bb54f7c70816a32c130f6d07a15.ctex"]
 
 [params]
 

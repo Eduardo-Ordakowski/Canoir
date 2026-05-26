@@ -1,15 +1,63 @@
 [gd_scene format=3 uid="uid://cp7qlisheh4hq"]
 
-[ext_resource type="Texture2D" uid="uid://bu7ay5fehaanc" path="res://Entities/Detetive/Assets/fix_frente.png" id="1_5m55h"]
 [ext_resource type="Script" uid="uid://cf8tohrcuebsk" path="res://Entities/Detetive/detetive_fix.gd" id="1_jbn5e"]
-[ext_resource type="Texture2D" uid="uid://cs4d6h57ey1ji" path="res://Entities/Detetive/Assets/fix_lado.png" id="2_jbn5e"]
-[ext_resource type="Texture2D" uid="uid://dgbupwmfwfbi1" path="res://Entities/Detetive/Assets/fix_atras.png" id="3_4lwg0"]
+[ext_resource type="Texture2D" uid="uid://vnpih44s62pb" path="res://Entities/Detetive/Assets/FixIdle_Down.png" id="2_plcw0"]
+[ext_resource type="Texture2D" uid="uid://ct7hp2bbu1ryg" path="res://Entities/Detetive/Assets/FixIdle_Side.png" id="3_7cgma"]
+[ext_resource type="Texture2D" uid="uid://bcbgn08tc50xw" path="res://Entities/Detetive/Assets/FixIdle_Up.png" id="4_kj0dr"]
+[ext_resource type="Texture2D" uid="uid://cpkcdpiwcp5k" path="res://Entities/Detetive/Assets/FixWalk_Down_0.png" id="5_muf82"]
+[ext_resource type="Texture2D" uid="uid://ucyc2sgcrthp" path="res://Entities/Detetive/Assets/FixWalk_Down_1.png" id="6_ndrj1"]
+[ext_resource type="Texture2D" uid="uid://hwq7vxya2ale" path="res://Entities/Detetive/Assets/FixWalk_Down_2.png" id="7_thien"]
+[ext_resource type="Texture2D" uid="uid://c31ma7ufmugjt" path="res://Entities/Detetive/Assets/FixWalk_Down_3.png" id="8_urbsq"]
+[ext_resource type="Texture2D" uid="uid://cyaaecbltins4" path="res://Entities/Detetive/Assets/FixWalk_Side_0.png" id="9_yi7l3"]
+[ext_resource type="Texture2D" uid="uid://cxcjq3pd3nhkm" path="res://Entities/Detetive/Assets/FixWalk_Side_1.png" id="10_drgri"]
+[ext_resource type="Texture2D" uid="uid://d153kmminodns" path="res://Entities/Detetive/Assets/FixWalk_Side_2.png" id="11_vwmpn"]
+[ext_resource type="Texture2D" uid="uid://c4kmysmxp7jud" path="res://Entities/Detetive/Assets/FixWalk_Side_3.png" id="12_a2ax8"]
+[ext_resource type="Texture2D" uid="uid://bbtkvmg4mtdwp" path="res://Entities/Detetive/Assets/FixWalk_Up_0.png" id="13_4b5oq"]
+[ext_resource type="Texture2D" uid="uid://ddh6sgsum2j4w" path="res://Entities/Detetive/Assets/FixWalk_Up_1.png" id="14_he52a"]
+[ext_resource type="Texture2D" uid="uid://chrskl4uk2ron" path="res://Entities/Detetive/Assets/FixWalk_Up_2.png" id="15_ruekm"]
+[ext_resource type="Texture2D" uid="uid://b6k7hgff0vl5p" path="res://Entities/Detetive/Assets/FixWalk_Up_3.png" id="16_fm3fd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jbftl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_5m55h")
+"texture": ExtResource("2_plcw0")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7cgma")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kj0dr")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_plcw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_muf82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ndrj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_thien")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_urbsq")
 }],
 "loop": true,
 "name": &"walk_down",
@@ -17,7 +65,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_jbn5e")
+"texture": ExtResource("9_yi7l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_drgri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vwmpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a2ax8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7cgma")
 }],
 "loop": true,
 "name": &"walk_side",
@@ -25,7 +85,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_4lwg0")
+"texture": ExtResource("4_kj0dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4b5oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_he52a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ruekm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fm3fd")
 }],
 "loop": true,
 "name": &"walk_up",
@@ -41,13 +113,12 @@ radius = 39.199997
 
 [node name="DetetiveFix" type="CharacterBody2D" unique_id=2022686740]
 texture_filter = 1
-scale = Vector2(2.5, 2.5)
 script = ExtResource("1_jbn5e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884000968]
-scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_jbftl")
 animation = &"walk_up"
+frame_progress = 0.05415502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042648119]
 position = Vector2(0, 15.2)
@@ -56,7 +127,6 @@ shape = SubResource("CapsuleShape2D_plcw0")
 [node name="InteractiveArea" type="Area2D" parent="." unique_id=1499042256]
 
 [node name="InteractiveCollision" type="CollisionShape2D" parent="InteractiveArea" unique_id=565212408]
-visible = false
 shape = SubResource("CircleShape2D_plcw0")
 
 [connection signal="area_entered" from="InteractiveArea" to="." method="_on_interactive_area_area_entered"]
