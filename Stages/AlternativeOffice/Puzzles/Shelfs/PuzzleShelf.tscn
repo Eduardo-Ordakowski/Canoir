@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bf1n1euifknv3"]
+
+[ext_resource type="Script" uid="uid://3wieutmdg7np" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/puzzle_shelf.gd" id="1_8mw6g"]
+[ext_resource type="AudioStream" uid="uid://dhfa0nmp60v32" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/rightOrder.mp3" id="2_2pgur"]
+[ext_resource type="AudioStream" uid="uid://b12y772d76vvf" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/wrongOrder.mp3" id="3_ep63l"]
+[ext_resource type="AudioStream" uid="uid://d107mpbtt04cq" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/completedOrder.mp3" id="4_e78vb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_toan4"]
+size = Vector2(25, 28)
+
+[node name="PuzzleShelf" type="Node2D" unique_id=1018008286]
+script = ExtResource("1_8mw6g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1919186060]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=763506491]
+position = Vector2(2.5, 4)
+shape = SubResource("RectangleShape2D_toan4")
+
+[node name="RightOrder" type="AudioStreamPlayer2D" parent="." unique_id=1771035862]
+stream = ExtResource("2_2pgur")
+
+[node name="WrongOrder" type="AudioStreamPlayer2D" parent="." unique_id=1135623980]
+stream = ExtResource("3_ep63l")
+volume_db = -10.0
+
+[node name="CompletedOrder" type="AudioStreamPlayer2D" parent="." unique_id=638596291]
+stream = ExtResource("4_e78vb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

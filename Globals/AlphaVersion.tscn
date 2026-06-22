@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b3b7sdi3lfa3r"]
+
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="1_37k13"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qj82"]
+font = ExtResource("1_37k13")
+font_color = Color(1, 1, 1, 0.60784316)
+
+[node name="AlphaVersion" type="CanvasLayer" unique_id=687705344]
+
+[node name="Label" type="Label" parent="." unique_id=254854077]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 227.0
+offset_top = -348.0
+offset_right = 310.0
+offset_bottom = -325.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Alpha 1.0v"
+label_settings = SubResource("LabelSettings_6qj82")

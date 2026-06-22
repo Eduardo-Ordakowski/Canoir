@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cn7lklcnjdm1y"]
+
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="1_3mxol"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj1ue"]
+bg_color = Color(0.10884702, 0.10884702, 0.10884702, 0.82600003)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.41568628, 0.06666667, 0.06666667, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[node name="ResolveGlitchButton" type="Button" unique_id=1115479602]
+texture_filter = 1
+offset_right = 139.0
+offset_bottom = 23.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pj1ue")
+
+[node name="Label" type="Label" parent="." unique_id=117132568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -11.5
+offset_right = 67.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_3mxol")
+text = "Resolver Glitch"

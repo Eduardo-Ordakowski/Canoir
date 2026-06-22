@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cjq47m3c8fj4i"]
+
+[ext_resource type="Script" uid="uid://crlwe7xdv6p1i" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedChimas/glitched_chimas.gd" id="1_io2jy"]
+[ext_resource type="Texture2D" uid="uid://bvkrioxacachf" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedChimas/Assets/Glitchedchimas.png" id="3_qjx5f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktmty"]
+texture = ExtResource("3_qjx5f")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vk4hq"]
+sources/0 = SubResource("TileSetAtlasSource_ktmty")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23ct7"]
+size = Vector2(13, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48qja"]
+size = Vector2(21, 24)
+
+[node name="GlitchedChimas" type="StaticBody2D" unique_id=1145870768]
+script = ExtResource("1_io2jy")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=318100131]
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_vk4hq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1052520015]
+position = Vector2(6.5, 25)
+shape = SubResource("RectangleShape2D_23ct7")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1321286314 groups=["glitch"]]
+position = Vector2(-5, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=883902024]
+position = Vector2(12.5, 30)
+shape = SubResource("RectangleShape2D_48qja")

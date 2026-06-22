@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://f6t1tm2bmsao"]
+
+[ext_resource type="PackedScene" uid="uid://bl2q5xmddoddc" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/BaseNode.tscn" id="1_lfub4"]
+
+[node name="TruthCore1" unique_id=1061215444 instance=ExtResource("1_lfub4")]
+title = "Truth Core 1"
+slot/0/right_enabled = false
+
+[node name="Label" parent="." index="1" unique_id=1776175555]
+text = ""

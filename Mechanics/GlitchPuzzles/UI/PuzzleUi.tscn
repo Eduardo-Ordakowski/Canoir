@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bcklg56pt83vn"]
+
+[ext_resource type="Script" uid="uid://0o8h8stiy0dw" path="res://Mechanics/GlitchPuzzles/UI/puzzle_ui.gd" id="1_vdaxc"]
+[ext_resource type="Texture2D" uid="uid://klnd5methg3k" path="res://Assets/Glitch/PuzzleBackground.png" id="2_kkfm3"]
+[ext_resource type="PackedScene" uid="uid://c4qfbp4it2ee3" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/AndGate.tscn" id="2_vdaxc"]
+[ext_resource type="PackedScene" uid="uid://f6t1tm2bmsao" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/TruthCore1.tscn" id="3_kkfm3"]
+[ext_resource type="PackedScene" uid="uid://djbdaw122xfkm" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/TruthCore2.tscn" id="4_fvx4r"]
+[ext_resource type="PackedScene" uid="uid://bg1qpwrd1biae" path="res://Mechanics/GlitchPuzzles/Types/TruthTablePuzzle/TruthCore3.tscn" id="5_0vnyh"]
+[ext_resource type="PackedScene" uid="uid://cn7lklcnjdm1y" path="res://Utilities/ResolveGlitchButton.tscn" id="7_ed4t5"]
+[ext_resource type="FontFile" uid="uid://yk0qeiwnmcy8" path="res://Assets/Fonts/pixel_noir/Pixel-Noir Skinny.ttf" id="8_fohy5"]
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="9_ed4t5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvx4r"]
+texture = ExtResource("2_kkfm3")
+modulate_color = Color(0.21434022, 0.5370987, 0.23141341, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fohy5"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.70350784, 0.8580836, 0.65457314, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 1
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[node name="PuzzleUi" type="CanvasLayer" unique_id=849241673]
+script = ExtResource("1_vdaxc")
+
+[node name="Background" type="Panel" parent="." unique_id=1520911]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fvx4r")
+
+[node name="Workspace" type="GraphEdit" parent="." unique_id=2041636235]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+show_grid = false
+snapping_enabled = false
+right_disconnects = true
+zoom_min = 1.0
+zoom_max = 1.0
+zoom_step = 1.0
+minimap_enabled = false
+show_menu = false
+show_zoom_buttons = false
+show_grid_buttons = false
+show_minimap_button = false
+show_arrange_button = false
+
+[node name="AndGate" parent="Workspace" unique_id=1061215444 instance=ExtResource("2_vdaxc")]
+texture_filter = 1
+layout_mode = 0
+offset_left = 962.0
+offset_top = 426.0
+offset_right = 1001.0
+offset_bottom = 529.0
+mouse_filter = 1
+position_offset = Vector2(962, 426)
+
+[node name="TruthCore1" parent="Workspace" unique_id=517037754 instance=ExtResource("3_kkfm3")]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 426.0
+offset_right = 1177.0
+offset_bottom = 504.0
+mouse_filter = 1
+position_offset = Vector2(1072, 426)
+
+[node name="TruthCore2" parent="Workspace" unique_id=1229352180 instance=ExtResource("4_fvx4r")]
+texture_filter = 1
+layout_mode = 0
+offset_left = 760.0
+offset_top = 407.0
+offset_right = 865.26
+offset_bottom = 485.00003
+mouse_filter = 1
+position_offset = Vector2(760, 407)
+
+[node name="TruthCore3" parent="Workspace" unique_id=1503090561 instance=ExtResource("5_0vnyh")]
+texture_filter = 1
+layout_mode = 0
+offset_left = 760.0
+offset_top = 494.0
+offset_right = 865.0
+offset_bottom = 572.0
+mouse_filter = 1
+position_offset = Vector2(760, 494)
+
+[node name="ResolveGlitchButton" parent="." unique_id=1115479602 instance=ExtResource("7_ed4t5")]
+offset_left = 821.00006
+offset_top = 640.0
+offset_right = 1042.0
+offset_bottom = 678.5
+scale = Vector2(1.5, 1.5)
+
+[node name="CloseButton" type="Button" parent="." unique_id=102984733]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -85.0
+offset_top = 23.0
+offset_right = -44.0
+offset_bottom = 64.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("8_fohy5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fohy5")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="CloseButton" unique_id=258395957]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.5
+offset_top = -19.5
+offset_right = 18.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_ed4t5")
+theme_override_font_sizes/font_size = 25
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="connection_request" from="Workspace" to="." method="_on_workspace_connection_request"]
+[connection signal="disconnection_request" from="Workspace" to="." method="_on_workspace_disconnection_request"]

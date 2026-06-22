@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bgshl7t00ihy6"]
+
+[ext_resource type="Script" uid="uid://brn1mja0tdpdg" path="res://Mechanics/GlitchPuzzles/Types/DragDropPuzzle/GlitchCuia/glitch_cuia.gd" id="1_xcu1m"]
+[ext_resource type="Texture2D" uid="uid://klnd5methg3k" path="res://Assets/Glitch/PuzzleBackground.png" id="2_qmqn8"]
+[ext_resource type="PackedScene" uid="uid://dq0oslur351sf" path="res://Mechanics/GlitchPuzzles/Types/DragDropPuzzle/Models/DropSlot.tscn" id="3_v1w5i"]
+[ext_resource type="PackedScene" uid="uid://bil7tuc4duwow" path="res://Mechanics/GlitchPuzzles/Types/DragDropPuzzle/Models/DraggableSyntax.tscn" id="4_wx0ms"]
+[ext_resource type="PackedScene" uid="uid://cn7lklcnjdm1y" path="res://Globals/ResolveGlitchButton.tscn" id="5_6b8l2"]
+[ext_resource type="FontFile" uid="uid://yk0qeiwnmcy8" path="res://Assets/Fonts/pixel_noir/Pixel-Noir Skinny.ttf" id="6_1jj36"]
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="7_sbue3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8u5a"]
+texture = ExtResource("2_qmqn8")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clmto"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.41568628, 0.06666667, 0.06666667, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 1
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[node name="GapPuzzleUi" type="CanvasLayer" unique_id=1739924048]
+script = ExtResource("1_xcu1m")
+
+[node name="Background" type="Panel" parent="." unique_id=523323959]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_p8u5a")
+
+[node name="MainContainer" type="VBoxContainer" parent="." unique_id=826160643]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.166626
+offset_top = -30.0
+offset_right = 122.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="PuzzleArea" type="HBoxContainer" parent="MainContainer" unique_id=1212299748]
+texture_filter = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Text2" type="Label" parent="MainContainer/PuzzleArea" unique_id=1998752803]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_sbue3")
+text = "Cuia."
+
+[node name="SlotValue" parent="MainContainer/PuzzleArea" unique_id=1577057339 instance=ExtResource("3_v1w5i")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="InventoryArea" type="FlowContainer" parent="MainContainer" unique_id=251536495]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 20
+alignment = 1
+
+[node name="SyntGetOrigin" parent="MainContainer/InventoryArea" unique_id=1089302094 instance=ExtResource("4_wx0ms")]
+layout_mode = 2
+syntax_value = "get_origin()"
+
+[node name="ResolveGlitchButton" parent="." unique_id=1617109843 instance=ExtResource("5_6b8l2")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.5
+offset_top = -88.5
+offset_right = 110.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CloseButton" type="Button" parent="." unique_id=1993782854]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 48.0
+offset_right = -53.0
+offset_bottom = 78.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("6_1jj36")
+theme_override_styles/normal = SubResource("StyleBoxFlat_clmto")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="CloseButton" unique_id=1155122500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.499985
+offset_top = -15.000002
+offset_right = 17.500015
+offset_bottom = 14.999998
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_sbue3")
+theme_override_font_sizes/font_size = 16
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text1" type="Label" parent="." unique_id=579044055]
+offset_left = 217.0
+offset_top = 65.0
+offset_right = 409.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("7_sbue3")
+text = "Essa cuia me é familiar..."
+
+[connection signal="pressed" from="ResolveGlitchButton" to="." method="_on_resolve_glitch_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

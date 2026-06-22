@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dgc3ktilmpjv2"]
+
+[ext_resource type="Script" uid="uid://dhlyj1ifwidpo" path="res://Stages/Office/Clues/ClueText/text_clue_table.gd" id="1_i7skj"]
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="2_0kk6a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d28ye"]
+paragraph_spacing = 0.3
+font = ExtResource("2_0kk6a")
+font_size = 10
+
+[node name="TextClueTable" type="CanvasLayer" unique_id=49011002]
+script = ExtResource("1_i7skj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=766173552]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -76.0
+offset_right = 126.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0.0022523496, 0.02728185, 0.33333334)
+
+[node name="Panel" type="Panel" parent="ColorRect" unique_id=1843304025]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/Panel" unique_id=1515247622]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 40.0
+text = "Lembre-se: Se estiver com problemas na porta, 
+um override deve bastar..."
+label_settings = SubResource("LabelSettings_d28ye")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

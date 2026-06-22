@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c2o4i8hpj5yi0"]
+
+[ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="1_tut37"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tut37"]
+bg_color = Color(0.004019165, 0, 0, 0.52156866)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d28ye"]
+paragraph_spacing = 0.3
+font = ExtResource("1_tut37")
+font_size = 13
+
+[node name="TextClueTable" type="CanvasLayer" unique_id=49011002]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=757792018]
+offset_left = 194.0
+offset_top = 284.0
+offset_right = 446.0
+offset_bottom = 324.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tut37")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1515247622]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "teste satanico test
+testetestetesteteste"
+label_settings = SubResource("LabelSettings_d28ye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
