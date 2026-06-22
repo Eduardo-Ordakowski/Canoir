@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dhc0rr5ado6a3"]
+
+[ext_resource type="Script" uid="uid://rarmqjtygw1i" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/glitched_door.gd" id="1_48qja"]
+[ext_resource type="PackedScene" uid="uid://bcklg56pt83vn" path="res://Mechanics/GlitchPuzzles/UI/PuzzleUi.tscn" id="2_ubfoy"]
+[ext_resource type="Texture2D" uid="uid://7qeiqxcuwi53" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor2.png" id="3_3ljbm"]
+[ext_resource type="Texture2D" uid="uid://bc76fbcrh2bcc" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor3.png" id="4_igpdv"]
+[ext_resource type="Texture2D" uid="uid://bdhypux6qv30x" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor4.png" id="5_v5yg2"]
+[ext_resource type="Texture2D" uid="uid://cx316xk0cjj25" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor5.png" id="6_dtncr"]
+[ext_resource type="Texture2D" uid="uid://basbeehqyhy2r" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor6.png" id="7_26tsy"]
+[ext_resource type="Texture2D" uid="uid://cliltmbykhia4" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor7.png" id="8_k1bhl"]
+[ext_resource type="Texture2D" uid="uid://c80k7c64wn0ww" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor8.png" id="9_oo4ff"]
+[ext_resource type="Texture2D" uid="uid://mw4jvoiuhuv" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor9.png" id="10_io6nw"]
+[ext_resource type="Texture2D" uid="uid://buf85cmvqlvun" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchedDoor/Assets/GlitchDoor10.png" id="11_0l38r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jmqj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_igpdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v5yg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dtncr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_26tsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1bhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oo4ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_io6nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0l38r")
+}],
+"loop": true,
+"name": &"DoorAnimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3ljbm")
+}],
+"loop": true,
+"name": &"DoorIdle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23ct7"]
+size = Vector2(70, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48qja"]
+size = Vector2(33, 44)
+
+[node name="GlitchedDoor" type="StaticBody2D" unique_id=1145870768]
+script = ExtResource("1_48qja")
+puzzle_scene = ExtResource("2_ubfoy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=491406439]
+texture_filter = 1
+position = Vector2(16, 11)
+scale = Vector2(1, 1.3125)
+sprite_frames = SubResource("SpriteFrames_jmqj2")
+animation = &"DoorIdle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1052520015]
+position = Vector2(18, 16)
+shape = SubResource("RectangleShape2D_23ct7")
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1321286314 groups=["glitch"]]
+position = Vector2(-5, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=883902024]
+position = Vector2(21.5, 17)
+shape = SubResource("RectangleShape2D_48qja")

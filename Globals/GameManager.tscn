@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c8hp58r103ili"]
+
+[ext_resource type="Script" uid="uid://c403ymg881xtd" path="res://Globals/game_manager.gd" id="1_fdlh5"]
+[ext_resource type="AudioStream" uid="uid://dhfa0nmp60v32" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/rightOrder.mp3" id="2_17d4c"]
+[ext_resource type="AudioStream" uid="uid://b12y772d76vvf" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/wrongOrder.mp3" id="3_l1bo0"]
+[ext_resource type="AudioStream" uid="uid://d107mpbtt04cq" path="res://Stages/AlternativeOffice/Puzzles/Shelfs/Assets/completedOrder.mp3" id="4_i5rjn"]
+
+[sub_resource type="Animation" id="Animation_fdlh5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_17d4c"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l1bo0"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5rjn"]
+_data = {
+&"RESET": SubResource("Animation_fdlh5"),
+&"fade_to_black": SubResource("Animation_17d4c"),
+&"fade_to_normal": SubResource("Animation_l1bo0")
+}
+
+[node name="TransitionLayer" type="CanvasLayer" unique_id=2113616690]
+layer = 100
+script = ExtResource("1_fdlh5")
+
+[node name="RightOrder" type="AudioStreamPlayer2D" parent="." unique_id=1088767864]
+stream = ExtResource("2_17d4c")
+
+[node name="WrongOrder" type="AudioStreamPlayer2D" parent="." unique_id=2134681040]
+stream = ExtResource("3_l1bo0")
+volume_db = -10.0
+
+[node name="CompletedOrder" type="AudioStreamPlayer2D" parent="." unique_id=408913454]
+stream = ExtResource("4_i5rjn")
+
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=2120911657]
+libraries/ = SubResource("AnimationLibrary_i5rjn")
+
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=577460911]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)

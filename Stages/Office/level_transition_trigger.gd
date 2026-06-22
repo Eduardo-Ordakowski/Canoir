@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var target_scene: String = "res://Stages/AlternativeOffice/AlternativeOffice.tscn"
+
 func _ready() -> void:
 	pass 
 

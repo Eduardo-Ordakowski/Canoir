@@ -1,22 +1,17 @@
 [gd_scene format=3 uid="uid://m8j57c0r0hr4"]
 
-[ext_resource type="Script" uid="uid://b6kkadhfw1ybq" path="res://MainScene.gd" id="1_rpqi1"]
+[ext_resource type="Script" uid="uid://b6kkadhfw1ybq" path="res://main_scene.gd" id="1_rpqi1"]
 [ext_resource type="PackedScene" uid="uid://b2q5l3cefim58" path="res://Stages/Office/Office.tscn" id="2_uxrcv"]
 [ext_resource type="PackedScene" uid="uid://cp7qlisheh4hq" path="res://Entities/Detetive/DetetiveFix.tscn" id="3_rf2cd"]
-[ext_resource type="PackedScene" uid="uid://dhc0rr5ado6a3" path="res://Mechanics/GlitchPuzzles/Interactables/GlitchDoor/GlitchedDoor.tscn" id="5_rf2cd"]
-[ext_resource type="PackedScene" uid="uid://bcxqadpnu8wj5" path="res://Mechanics/GlitchPuzzles/UI/GapPuzzleUi.tscn" id="6_a814b"]
 
 [node name="MainScene" type="Node" unique_id=1410771261]
 script = ExtResource("1_rpqi1")
 
 [node name="SpanwPoint" type="Marker2D" parent="." unique_id=32095228]
-position = Vector2(308, 276)
+position = Vector2(88.000015, 169)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Office" parent="." unique_id=1372138319 instance=ExtResource("2_uxrcv")]
-
-[node name="GlitchedDoor" parent="." unique_id=781067837 instance=ExtResource("5_rf2cd")]
-position = Vector2(247, 59)
-puzzle_scene = ExtResource("6_a814b")
+position = Vector2(-14, 48)
 
 [node name="DetetiveFix" parent="." unique_id=2022686740 instance=ExtResource("3_rf2cd")]

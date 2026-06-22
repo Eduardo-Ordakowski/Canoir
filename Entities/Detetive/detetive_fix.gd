@@ -7,12 +7,14 @@ extends CharacterBody2D
 var can_interact = false
 var interactable_object = null
 var opened_puzzle = false
-
+var in_cutscene = false
 #endregion 
 
 func _physics_process(delta):
 	
 	if opened_puzzle:
+		return
+	if in_cutscene:
 		return
 		
 	var input_direction = Vector2.ZERO
@@ -36,7 +38,7 @@ func _physics_process(delta):
 	move_and_slide()
 	_update_sprite_direction(input_direction)
 	
-	if Input.is_action_just_pressed("ui_accept") and can_interact:
+	if Input.is_action_just_pressed("interact") and can_interact:
 		open_puzzle()
 	
 func _update_sprite_direction(dir):

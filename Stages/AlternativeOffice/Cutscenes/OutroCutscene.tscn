@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4xh0xn8yb3uu"]
 
 [ext_resource type="FontFile" uid="uid://ctwwuhvqn80vf" path="res://Assets/Fonts/determination/determination.ttf" id="1_2kiwd"]
-[ext_resource type="AudioStream" uid="uid://crd27n7lb785q" path="res://Stages/AlternativeOffice/Assets/introSound.mp3" id="2_nvc2b"]
+[ext_resource type="AudioStream" uid="uid://crd27n7lb785q" path="res://Stages/Office/Assets/Music/introSound.mp3" id="2_nvc2b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nvc2b"]
 font = ExtResource("1_2kiwd")
